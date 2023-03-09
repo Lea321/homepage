@@ -142,16 +142,18 @@ function article() {
     dom.innerHTML = html
   })
 }
+
+
 photos()
 function photos() {
   fetch('https://m.leonus.cn/api/memo?creatorId=1&tag=相册').then(res => res.json()).then(data => {
+    data = data.data
     let html = '',
       imgs = [];
-    data.data.forEach(item => { imgs = imgs.concat(item.content.match(/\!\[.*?\]\(.*?\)/g)) });
-    imgs.forEach(item => {
+    for (let i = 0; i < data.length; i++) { if (imgs.length < 9) imgs = imgs.concat(data[i].content.match(/\!\[.*?\]\(.*?\)/g)) }
+    imgs.slice(0, 9).forEach(item => {
       let img = item.replace(/!\[.*?\]\((.*?)\)/g, '$1'),
         tat = item.replace(/!\[(.*?)\]\(.*?\)/g, '$1').trim();
-
       html += `<img src="${img}" alt="${tat}" title="${tat}">`;
     });
 
