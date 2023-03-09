@@ -115,6 +115,7 @@ function scrollToTopWithAnimation() {
   requestAnimationFrame(animation);
 }
 
+// 文章
 article()
 function article() {
   fetch('https://api.leonus.cn/article').then(res => res.json()).then(data => {
@@ -143,7 +144,7 @@ function article() {
   })
 }
 
-
+// 相册
 photos()
 function photos() {
   fetch('https://m.leonus.cn/api/memo?creatorId=1&tag=相册').then(res => res.json()).then(data => {
