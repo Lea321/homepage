@@ -1,0 +1,94 @@
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav {
+    height: 15vh;
+    min-height: 130px;
+    justify-content: space-between !important;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo img {
+    height: 50%;
+}
+
+ul {
+    display: flex;
+    height: 40px;
+}
+
+li i {
+    font-size: 1.8rem !important;
+    margin: 0 20px;
+}
+
+.btn {
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    border: rgb(46, 172, 221) 2px solid;
+    color: rgb(46, 172, 221);
+    border-radius: 100px;
+}
+
+#next {
+    margin-top: 50px;
+    background-color: rgb(46, 172, 221);
+    border: none;
+    color: white;
+}
+
+.content {
+    height: 60vh;
+    min-height: 400px;
+}
+
+#text {
+    max-width: 800px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px 3rem;
+}
+
+.box {
+    margin-bottom: 3rem;
+    display: flex;
+    position: relative;
+}
+
+.box .left,
+.box .right {
+    font-size: 1.5rem;
+    position: absolute;
+}
+
+.box .left {
+    left: 0;
+}
+
+.box .right {
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width:800px) {
+    .content {
+        width: 90%;
+        margin: auto;
+    }
+    #text {
+        font-size: 1.5rem;
+    }
+}

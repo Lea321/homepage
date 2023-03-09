@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <meta name="keywords" content="todo,todolist,备忘,便签,待办">
+    <meta name="description" content="这是一个简单的待办事项工具。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+
+    <!-- jquery -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="top">
+        <div class="top_logo">
+            <a href="/todo"><img src="img/logo.svg" alt="">&nbsp;TodoList</a>
+        </div>
+        <!-- <div class="show_time"></div> -->
+        <a href="javascript:;" class="show_time"></a>
+    </header>
+
+    <div class="listbox">
+        <audio class="music" src="mp3/done0.mp3"></audio>
+        <div class="inputtodo">
+            <input type="text" placeholder="创建新的待办事项">
+            <a href="javascript:;">创建</a>
+        </div>
+
+        <div class="listtitle">
+            <h1>进行中</h1>
+            <span class="doingnum">0</span>
+        </div>
+        <ol class="doing"> </ol>
+
+        <div class="listtitle">
+            <h1>已完成</h1>
+            <span class="donenum">0</span>
+        </div>
+        <ul class="done"> </ul>
+    </div>
+    <div class="setwindow">
+        <!-- 关闭按钮 -->
+        <i class="far fa-times-circle"></i>
+        <div class="setmusic">
+            音效设置: <br>
+            <table>
+                <tr>
+                    <td>
+                        <label><input data-index="0" class="musicbtn" type="radio" name="music" checked> 默认</label>
+                    </td>
+                    <td>
+                        <label><input data-index="1" class="musicbtn" type="radio" name="music"> 音效1</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><input data-index="2" class="musicbtn" type="radio" name="music"> 音效2</label>
+                    </td>
+                    <td>
+                        <label><input data-index="3" class="musicbtn" type="radio" name="music"> 关闭音效</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <a href="/">© 2021 by Leonus.</a><br>
+        <a href="https://beian.miit.gov.cn/">豫ICP备20005146号-2</a>
+    </footer>
+</body>
+
+</html>

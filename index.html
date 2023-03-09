@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonus</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.webp">
+  <link rel="apple-touch-icon" href="/img/favicon.webp">
+  <meta name="apple-mobile-web-app-title" content="Leonus">
+  <link rel="bookmark" href="/img/favicon.webp">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/favicon.webp">
+  <meta name="theme-color" content="#1C1C1F">
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3280804_sutv6qztv2c.css">
+  <script src="//at.alicdn.com/t/c/font_3280804_sutv6qztv2c.js"></script>
+  <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body id="body">
+  <div class="nav">
+    <div class="nav-content">
+      <div class="nav-left">
+        <a href="javascript:scrollToTopWithAnimation()" class="site-logo">
+          <img src="https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5" alt="logo" class="site-logo-img">
+          <span class="site-name">Leonus</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <a href="javascript:scrollToTopWithAnimation()" class="nav-item">首页</a>
+        <a href="javascript:heoWeb.scrollTo('博客');" class="nav-item">博客</a>
+        <a href="javascript:heoWeb.scrollTo('文章');" class="nav-item">文章</a>
+        <a href="javascript:heoWeb.scrollTo('技能');" class="nav-item">技能</a>
+        <a href="javascript:heoWeb.scrollTo('项目');" class="nav-item">项目</a>
+        <a href="javascript:heoWeb.scrollTo('相册');" class="nav-item">相册</a>
+        <a href="javascript:heoWeb.scrollTo('社交');" class="nav-item">社交</a>
+        <a class="nav-menu" id="nav-menu"><span class="iconfont icon-caidan"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="menu-list" id="menu-list">
+    <a href="javascript:scrollToTopWithAnimation()" class="nav-item">首页</a>
+    <a href="javascript:heoWeb.scrollTo('博客');" class="nav-item">博客</a>
+    <a href="javascript:heoWeb.scrollTo('文章');" class="nav-item">文章</a>
+    <a href="javascript:heoWeb.scrollTo('技能');" class="nav-item">技能</a>
+    <a href="javascript:heoWeb.scrollTo('项目');" class="nav-item">项目</a>
+    <a href="javascript:heoWeb.scrollTo('相册');" class="nav-item">相册</a>
+    <a href="javascript:heoWeb.scrollTo('社交');" class="nav-item">社交</a>
+  </div>
+  <!-- <div class="nav-banner">
+    <a class="nav-banner-text" href="https://blog.zhheo.com/p/671f98c8.html" target="_blank">敲木鱼 现已登录 App Store <span
+        class="iconfont icon-xiangyou1" style="font-size: 12px;"></span></a>
+  </div> -->
+
+  <a id="go-top" href="javascript:scrollToTopWithAnimation()">
+    <span class="iconfont icon-xiangyou1"></span>
+  </a>
+
+
+  <div class="first-stack need-padding">
+    <div class="left-Introduce">
+      <div class="title-group">
+        <span class="title">这不是 <span class="inline-word">bug</span>，</span>
+        <span class="title">这是一个<span class="inline-word">特性</span>。</span>
+      </div>
+      <div class="discription">
+        <span class="discription-text">它在我的机器上可以很好的<span class="inline-word">运行！</span></span>
+      </div>
+      <a href="javascript:heoWeb.scrollTo('博客');" class="about-button">了解更多</a>
+    </div>
+    <div class="right-stack">
+      <img class="banner-img" src="/img/cover.webp" alt="banner" title="banner">
+      <img class="banner-img-logo" src="https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5" alt="banner" title="banner">
+    </div>
+  </div>
+  </div>
+
+  <!-- 博客 -->
+  <div class="product-banner" id="博客">
+    <div class="banner-info need-padding">
+      <span class="title">个人博客</span>
+      <div class="banner-discription-group">
+        <span class="description">基于 Hexo 框架的纯静态博客平台，</span>
+        <span class="description">基于 Butterfly 主题进行了大量的魔改与美化。</span>
+      </div>
+      <div class="link-group">
+        <a class="primary-button" href="https://blog.leonus.cn/">访问项目</a>
+      </div>
+    </div>
+    <div class="banner-pic">
+      <img class="banner-pic-img" src="/img/banner-blog.webp" alt="banner image">
+    </div>
+  </div>
+
+  <!-- 文章 -->
+  <div class="product-group need-padding" id="文章">
+    <h2 class="group-title">最新文章</h2>
+    <span class="group-description">博客内最近发布的6篇文章。</span>
+    <div class="articles">
+      <div class="group-items">
+        <img src="/img/loading.gif" alt="加载中" style="margin: auto;">
+      </div>
+    </div>
+  </div>
+
+  <!-- 技能 -->
+  <div class="product-banner" id="技能" style="background-image: linear-gradient(180deg, #274DFF 0%, #6CA4FF 100%);">
+    <div class="banner-info need-padding">
+      <span class="title">技能</span>
+      <div class="banner-discription-group">
+        <span class="description">奇思妙想的<span class="inline-word">实现</span></span>
+        <span class="description">离不开<span class="inline-word">技术</span></span>
+      </div>
+      <div class="link-group">
+        <a class="primary-button" href="https://blog.leonus.cn/about/">查看更多</a>
+      </div>
+    </div>
+    <div class="banner-pic">
+      <img class="banner-pic-img" src="/img/banner-skill.webp" alt="banner image">
+    </div>
+  </div>
+
+  <div class="product-group need-padding" id="项目">
+    <h2 class="group-title">小项目</h2>
+    <span class="group-description">随便写的一些小项目</span>
+    <div class="group-items">
+
+      <!-- studyTime -->
+      <div class="group-item">
+        <a class="group-item-icon" href="https://study.sitenav.cn" target="_blank" rel="noopener nofollow">
+          <img class="group-item-icon-img" src="https://study.sitenav.cn/img/favicon.ico" alt="product-icon"
+            title="product-icon">
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="https://study.sitenav.cn" target="_blank" rel="noopener nofollow">学习记录</a>
+            <a class="discription" href="https://study.sitenav.cn" target="_blank" rel="noopener nofollow">学习时长记录工具</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="https://study.sitenav.cn" target="_blank" rel="noopener nofollow">获取</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- todo list -->
+      <div class="group-item">
+        <a class="group-item-icon" href="/todo/" target="_blank" rel="noopener nofollow">
+          <img class="group-item-icon-img" src="/todo/img/logo.svg" alt="product-icon" title="product-icon">
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="/todo/" target="_blank" rel="noopener nofollow">TodoList</a>
+            <a class="discription" href="/todo/" target="_blank" rel="noopener nofollow">待办事项记录</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="/todo/" target="_blank" rel="noopener nofollow">获取</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- resume -->
+      <div class="group-item">
+        <a class="group-item-icon" href="/resume/" target="_blank">
+          <img class="group-item-icon-img" src="/resume/favicon.ico" alt="product-icon" title="product-icon">
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="/resume/" target="_blank">个人简历</a>
+            <a class="discription" href="/resume/" target="_blank">找工作必备，虽然我没找到。。。</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="/resume/" target="_blank">获取</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 相册 -->
+  <div class="product-banner" id="相册" style="background-image: linear-gradient(180deg, #830FC1 0%, #3D00A0 100%);">
+    <div class="banner-info need-padding">
+      <span class="title">相册</span>
+      <div class="banner-discription-group">
+        <span class="description">发现生活的美好并将它记录下来</span>
+      </div>
+      <div class="link-group">
+        <a class="primary-button" href="https://blog.leonus.cn/photos/">查看更多</a>
+      </div>
+    </div>
+    <div class="banner-pic photos">
+      <div class="banner-pic-img">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+        <img src="/img/loading.gif" alt="loading">
+      </div>
+    </div>
+  </div>
+
+  <div class="product-group need-padding contact" id="社交">
+    <h2 class="group-title">社交</h2>
+    <span class="group-description">我常用的社交软件，你可以通过以下方式联系我</span>
+
+    <div class="icons group-items">
+
+      <!-- QQ -->
+      <div class="group-item">
+        <a class="group-item-icon" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
+          rel="noopener nofollow">
+          <svg class="icons group-item-icon-img">
+            <use xlink:href="#icon-QQ"></use>
+          </svg>
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
+              rel="noopener nofollow">QQ</a>
+            <a class="discription" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
+              rel="noopener nofollow">QQ号：990320751</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
+              rel="noopener nofollow">添加</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 微信 -->
+      <div class="group-item">
+        <a class="group-item-icon" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
+          rel="noopener nofollow">
+          <svg class="icons group-item-icon-img">
+            <use xlink:href="#icon-weixin1"></use>
+          </svg>
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
+              rel="noopener nofollow">微信</a>
+            <a class="discription" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
+              rel="noopener nofollow">微信号：Li-18181</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
+              rel="noopener nofollow">添加</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 邮箱 -->
+      <div class="group-item">
+        <a class="group-item-icon" href="mailto:990320751@qq.com" target="_blank" rel="noopener nofollow">
+          <svg class="icons group-item-icon-img">
+            <use xlink:href="#icon-youxiang"></use>
+          </svg>
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="mailto:990320751@qq.com" target="_blank" rel="noopener nofollow">邮箱</a>
+            <a class="discription" href="mailto:990320751@qq.com" target="_blank"
+              rel="noopener nofollow">邮箱：990320751@qq.com</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="mailto:990320751@qq.com" target="_blank" rel="noopener nofollow">发信</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- bilibili -->
+      <div class="group-item">
+        <a class="group-item-icon" href="https://space.bilibili.com/446753369" target="_blank" rel="noopener nofollow">
+          <svg class="icons group-item-icon-img">
+            <use xlink:href="#icon-bilibili"></use>
+          </svg>
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="https://space.bilibili.com/446753369" target="_blank"
+              rel="noopener nofollow">哔哩哔哩</a>
+            <a class="discription" href="https://space.bilibili.com/446753369" target="_blank"
+              rel="noopener nofollow">小破站首页，没什么可看的。</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="https://space.bilibili.com/446753369" target="_blank"
+              rel="noopener nofollow">查看</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="group-item">
+        <a class="group-item-icon" href="https://github.com/Lea321" target="_blank" rel="noopener nofollow">
+          <svg class="icons group-item-icon-img">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <div class="group-info-group">
+          <div class="group-info">
+            <a class="title" href="https://github.com/Lea321" target="_blank" rel="noopener nofollow">GitHub</a>
+            <a class="discription" href="https://github.com/Lea321" target="_blank"
+              rel="noopener nofollow">GitHub首页，大型同性交友网站。</a>
+          </div>
+          <div class="group-info-button">
+            <a class="linkbutton" href="https://github.com/Lea321" target="_blank" rel="noopener nofollow">查看</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-content need-padding">
+      <span class="info">Copyright © 2021-2023 Leonus 保留所有权利。</span>
+      <div class="info-group">
+        <a class="info" href="https://beian.miit.gov.cn/" target="_blank">豫ICP备20005146号</a>
+        <a class="info" href="https://github.com/zhheo/HeoWeb" target="_blank">主题：HeoWeb</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="/js/simpleParallax.min.js"></script>
+<script src="/js/main.js"></script>
+
+</html>

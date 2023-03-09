@@ -1,0 +1,200 @@
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+body {
+    line-height: 2;
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    margin: 5px 0;
+    background: #555;
+}
+
+ol,
+ul {
+    padding-left: 1.2rem;
+}
+
+table {
+    width: 100%;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+#resume a {
+    text-decoration: none;
+    color: #888;
+}
+
+.icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: .5rem;
+}
+
+.resume_top,
+.resume_main {
+    padding: 0 2rem;
+}
+
+.content {
+    padding: 0 2rem;
+}
+
+.resume_top,
+.resume_top div {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #4c4c4c;
+    color: white;
+    height: 3.5rem;
+}
+
+.resume_info {
+    padding: 0 4rem;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.resume_info img {
+    border: 1px solid #4c4c4c;
+    width: 100px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.resume_info .info_list .en-text,
+.resume_info .info_list span {
+    position: relative;
+    margin-right: 1rem;
+    display: inline-block;
+    width: 3rem;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align-last: justify;
+    text-justify: inter-word;
+    font-weight: bold;
+}
+
+.resume_info .info_list .en-text {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.resume_info .info_list .en-text::after,
+.resume_info .info_list span::after {
+    content: "：";
+    position: absolute;
+    right: -1.1rem;
+}
+
+.resume_bottom {
+    height: 2rem;
+    margin-top: 2rem;
+    background: #4c4c4c;
+}
+
+h2.title {
+    display: flex;
+    align-items: center;
+    color: #4c4c4c;
+    border-bottom: 3px solid;
+    margin: 1rem 0 10px;
+}
+
+.work ul,
+.work ol,
+.work span {
+    margin: 0 0 0 1rem;
+}
+
+.work h3 {
+    margin: 0;
+}
+
+@media (max-width:1200px) {
+    .github-corner svg {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+
+@media (max-width:900px) {
+    .resume_top {
+        padding-right: 36px;
+    }
+}
+
+@media (max-width:700px) {
+    .content {
+        padding: 0;
+    }
+    .resume_top {
+        font-size: 1rem;
+    }
+    .resume_top div {
+        font-size: 1.1rem;
+    }
+    .resume_top {
+        padding-left: 1rem;
+    }
+    .resume_top img {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+    .resume_main {
+        padding: 0 1rem;
+    }
+    .resume_info {
+        padding: 0 1rem;
+        position: relative;
+    }
+    .resume_info img {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+    }
+    table.info_list tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .edu tr td:first-child {
+        display: none;
+    }
+}
