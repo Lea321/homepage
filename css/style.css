@@ -302,6 +302,7 @@ img.site-logo-img {
   top: 31%;
 }
 
+
 span.site-name {
   color: var(--heo-white);
   font-size: 12px;
@@ -353,20 +354,38 @@ span.discription-text {
   margin-top: 28px;
 }
 
-a.about-button {
+.btns {
   display: flex;
-  padding: 12px 36px;
+  margin-top: 64px;
+  gap: 10px;
+}
+
+.btns a {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
   background: var(--heo-card-btn-bg);
   color: var(--heo-white);
   border-radius: 29px;
   box-shadow: 0px 12px 12px -9px rgba(0, 0, 0, 0.29);
-  margin-top: 64px;
-  width: fit-content;
   transition: ease-in-out 0.3s;
   white-space: nowrap;
+  line-height: 1;
 }
 
-a.about-button:hover {
+.btns a span {
+  font-size: 20px;
+}
+
+a.about-button {
+  width: auto;
+  padding: 0 36px;
+}
+
+.btns a:hover {
   background: var(--heo-main);
   box-shadow: 0px 12px 12px -9px rgba(5, 51, 137, 0.29);
 }
@@ -671,7 +690,7 @@ a.second-link:hover {
     margin-bottom: 40px;
   }
 
-  a.about-button {
+  .btns {
     margin-top: 40px;
   }
 

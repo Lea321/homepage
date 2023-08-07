@@ -154,3 +154,6 @@ leonus.article()
 // 相册
 leonus.photos()
 
+var notyf = new Notyf();
+new ClipboardJS(".qq-btn", { text: function () { return '990320751' } }).on('success', () => { notyf.success("QQ号已复制到剪切板") })
+new ClipboardJS(".wx-btn", { text: function () { return 'Li-18181' } }).on('success', () => { notyf.success("微信号已复制到剪切板") })

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leonus</title>
-  <link rel="stylesheet" href="/css/style.css?2">
+  <link rel="stylesheet" href="/css/style.css?3">
   <link rel="icon" type="image/x-icon" href="/img/favicon.webp">
   <link rel="apple-touch-icon" href="/img/favicon.webp">
   <meta name="apple-mobile-web-app-title" content="Leonus">
@@ -14,21 +14,23 @@
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/favicon.webp">
   <meta name="theme-color" content="#1C1C1F">
   <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3280804_sutv6qztv2c.css">
+  <link rel="stylesheet" href="//cdn.staticfile.org/notyf/3.10.0/notyf.min.css">
   <script src="//at.alicdn.com/t/c/font_3280804_sutv6qztv2c.js"></script>
-  <!-- <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="//unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="//cdn.staticfile.org/notyf/3.10.0/notyf.min.js"></script>
 </head>
 
 <body id="body">
   <div class="nav">
     <div class="nav-content">
       <div class="nav-left">
-        <a href="javascript:scrollToTop()" class="site-logo">
+        <a href="javascript:leonus.scrollToTop()" class="site-logo">
           <img src="https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5" alt="logo" class="site-logo-img">
           <span class="site-name">Leonus</span>
         </a>
       </div>
       <div class="nav-right">
-        <a href="javascript:scrollToTop()" class="nav-item">首页</a>
+        <a href="javascript:leonus.scrollToTop()" class="nav-item">首页</a>
         <a href="javascript:leonus.scrollTo('博客');" class="nav-item">博客</a>
         <a href="javascript:leonus.scrollTo('文章');" class="nav-item">文章</a>
         <a href="javascript:leonus.scrollTo('技能');" class="nav-item">技能</a>
@@ -40,7 +42,7 @@
     </div>
   </div>
   <div class="menu-list" id="menu-list">
-    <a href="javascript:scrollToTop()" class="nav-item">首页</a>
+    <a href="javascript:leonus.scrollToTop()" class="nav-item">首页</a>
     <a href="javascript:leonus.scrollTo('博客');" class="nav-item">博客</a>
     <a href="javascript:leonus.scrollTo('文章');" class="nav-item">文章</a>
     <a href="javascript:leonus.scrollTo('技能');" class="nav-item">技能</a>
@@ -53,7 +55,7 @@
         class="iconfont icon-xiangyou1" style="font-size: 12px;"></span></a>
   </div> -->
 
-  <a id="go-top" href="javascript:scrollToTop()">
+  <a id="go-top" href="javascript:leonus.scrollToTop()">
     <span class="iconfont icon-xiangyou1"></span>
   </a>
 
@@ -67,7 +69,11 @@
       <div class="discription">
         <span class="discription-text">它在我的机器上可以很好的<span class="inline-word">运行！</span></span>
       </div>
-      <a href="javascript:leonus.scrollTo('博客');" class="about-button">了解更多</a>
+      <div class="btns">
+        <a href="javascript:leonus.scrollTo('博客');" class="about-button">了解更多</a>
+        <a href="javascript:;" class="qq-btn"><span class="iconfont icon-qq-line"></span></a>
+        <a href="javascript:;" class="wx-btn"><span class="iconfont icon-weixin"></span></a>
+      </div>
     </div>
     <div class="right-stack">
       <img class="banner-img" src="/img/cover.webp" alt="banner" title="banner">
@@ -246,63 +252,55 @@
 
       <!-- QQ -->
       <div class="group-item">
-        <a class="group-item-icon" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
-          rel="noopener nofollow">
+        <a class="group-item-icon qq-btn" href="javasctipt:;" rel="noopener nofollow">
           <svg class="icons group-item-icon-img">
             <use xlink:href="#icon-QQ"></use>
           </svg>
         </a>
         <div class="group-info-group">
           <div class="group-info">
-            <a class="title" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
-              rel="noopener nofollow">QQ</a>
-            <a class="discription" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
-              rel="noopener nofollow">QQ号：990320751</a>
+            <a class="title qq-btn" href="javasctipt:;" rel="noopener nofollow">QQ</a>
+            <a class="discription qq-btn" href="javasctipt:;" rel="noopener nofollow">QQ号：990320751</a>
           </div>
           <div class="group-info-button">
-            <a class="linkbutton" href="https://res.abeim.cn/api/qq/?qq=553344777" target="_blank"
-              rel="noopener nofollow">添加</a>
+            <a class="linkbutton qq-btn" href="javasctipt:;" rel="noopener nofollow">添加</a>
           </div>
         </div>
       </div>
 
       <!-- 微信 -->
       <div class="group-item">
-        <a class="group-item-icon" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
-          rel="noopener nofollow">
+        <a class="group-item-icon wx-btn" href="javascript:;" rel="noopener nofollow">
           <svg class="icons group-item-icon-img">
             <use xlink:href="#icon-weixin1"></use>
           </svg>
         </a>
         <div class="group-info-group">
           <div class="group-info">
-            <a class="title" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
-              rel="noopener nofollow">微信</a>
-            <a class="discription" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
-              rel="noopener nofollow">微信号：Li-18181</a>
+            <a class="title  wx-btn" href="javascript:;" rel="noopener nofollow">微信</a>
+            <a class="discription  wx-btn" href="javascript:;" rel="noopener nofollow">微信号：Li-18181</a>
           </div>
           <div class="group-info-button">
-            <a class="linkbutton" href="https://cdn.leonus.cn/img/myWechat.webp" target="_blank"
-              rel="noopener nofollow">添加</a>
+            <a class="linkbutton  wx-btn" href="javascript:;" rel="noopener nofollow">添加</a>
           </div>
         </div>
       </div>
 
       <!-- 邮箱 -->
       <div class="group-item">
-        <a class="group-item-icon" href="mailto:990320751@qq.com" target="_blank" rel="noopener nofollow">
+        <a class="group-item-icon" href="mailto:lshj888@gmail.com" target="_blank" rel="noopener nofollow">
           <svg class="icons group-item-icon-img">
             <use xlink:href="#icon-youxiang"></use>
           </svg>
         </a>
         <div class="group-info-group">
           <div class="group-info">
-            <a class="title" href="mailto:990320751@qq.com" target="_blank" rel="noopener nofollow">邮箱</a>
-            <a class="discription" href="mailto:990320751@qq.com" target="_blank"
-              rel="noopener nofollow">邮箱：990320751@qq.com</a>
+            <a class="title" href="mailto:lshj888@gmail.com" target="_blank" rel="noopener nofollow">邮箱</a>
+            <a class="discription" href="mailto:lshj888@gmail.com" target="_blank"
+              rel="noopener nofollow">邮箱：lshj888@gmail.com</a>
           </div>
           <div class="group-info-button">
-            <a class="linkbutton" href="mailto:990320751@qq.com" target="_blank" rel="noopener nofollow">发信</a>
+            <a class="linkbutton" href="mailto:lshj888@gmail.com" target="_blank" rel="noopener nofollow">发信</a>
           </div>
         </div>
       </div>
@@ -362,6 +360,6 @@
 </body>
 
 <script src="/js/simpleParallax.min.js"></script>
-<script src="/js/main.js?1"></script>
+<script src="/js/main.js?3"></script>
 
 </html>
