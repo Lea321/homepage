@@ -376,6 +376,11 @@ span.discription-text {
   line-height: 1;
 }
 
+.notyf__icon {
+  margin-right: 8px !important;
+}
+
+.notyf__icon span,
 .btns a span {
   font-size: 20px;
 }
@@ -666,6 +671,14 @@ a.second-link:hover {
 }
 
 @media screen and (max-width: 768px) {
+  span.site-name {
+    font-size: 14px;
+  }
+
+  span.discription-text {
+    margin-top: 20px;
+  }
+
   .group-info-group {
     margin-left: 15px;
   }
@@ -691,7 +704,7 @@ a.second-link:hover {
   }
 
   .btns {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .group-items {
@@ -701,7 +714,7 @@ a.second-link:hover {
 
   .first-stack {
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 100px;
   }
 
   .product-group {

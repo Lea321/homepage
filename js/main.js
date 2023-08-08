@@ -154,6 +154,28 @@ leonus.article()
 // 相册
 leonus.photos()
 
-var notyf = new Notyf();
-new ClipboardJS(".qq-btn", { text: function () { return '990320751' } }).on('success', () => { notyf.success("QQ号已复制到剪切板") })
-new ClipboardJS(".wx-btn", { text: function () { return 'Li-18181' } }).on('success', () => { notyf.success("微信号已复制到剪切板") })
+var notyf = new Notyf({
+  duration: 2000,
+  types: [
+    {
+      type: 'qq',
+      background: '#333333',
+      icon: {
+        className: 'iconfont icon-qq-line',
+        tagName: 'span',
+        color: 'white'
+      }
+    },
+    {
+      type: 'wechat',
+      background: '#333333',
+      icon: {
+        className: 'iconfont icon-weixin',
+        tagName: 'span',
+        color: 'white'
+      }
+    }
+  ]
+});
+new ClipboardJS(".qq-btn", { text: function () { return '990320751' } }).on('success', () => { notyf.open({ type: 'qq', message: 'QQ号已复制到剪切板' }) })
+new ClipboardJS(".wx-btn", { text: function () { return 'Li-18181' } }).on('success', () => { notyf.open({ type: 'wechat', message: '微信号已复制到剪切板' }) })
